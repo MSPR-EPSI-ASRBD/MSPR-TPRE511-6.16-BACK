@@ -30,7 +30,7 @@ CORS(app)
 #file = UploadSet('files',All)
 #configure_uploads(app,files)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://mspr:{config("DATABASE_PASSWORD")}@127.0.0.1/mspr'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://backend:{config("DATABASE_PASSWORD")}@127.0.0.1/mspr'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = config('JWT_SECRET_KEY')
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(hours=12)
